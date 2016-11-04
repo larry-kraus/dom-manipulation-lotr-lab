@@ -88,18 +88,36 @@ var ring = document.createElement("div");
 ring.setAttribute("id", "the-ring");
 ring.setAttribute("class", "magic-imbued-jewelry");
 
+ring.addEventListener("click", nazgulScreech);
+var frodo = document.querySelector("li");
+frodo.appendChild(ring);
+
+keepItSecretKeepItSafe();
 
 
-console.log("Part 3 is working!");
 // Part 4
 
 
 function makeBuddies() {
   // create an aside tag
+var asideTag = document.createElement("aside");
+
   // attach an unordered list of the 'buddies' in the aside
-  // insert your aside as a child element of rivendell
+var buddiesList = document.createElement('ul');
+var attachAside = document.querySelector("aside");
+for (var i = 0; i < buddies.length; i++) {
+  var listOfBuddies = document.createElement('li');
+  listOfBuddies.textContent = buddies[i];
+  attachAside.appendChild(listOfBuddies);
 }
 
+  // insert your aside as a child element of rivendell
+var rivendell = querySelectorAll('article')[1];
+rivendell.appendChild(asideTag);
+
+}
+makeBuddies();
+console.log("Part 4 is working!");
 
 // Part 5
 
