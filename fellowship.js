@@ -33,26 +33,26 @@ function makeMiddleEarth() {
   section.setAttribute = ("id", "middle-earth");
   body.appendChild(section);
   
-  var article = document.createElement('article');
-  section.appendChild(article);
+  var article1 = document.createElement('article');
+  section.appendChild(article1);
 
   var h11 = document.createElement('h1');
   h11.textContent = "The Shire";
-  article.appendChild(h11);
+  article1.appendChild(h11);
 
-  var article = document.createElement('article');
-  section.appendChild(article);
+  var article2 = document.createElement('article');
+  section.appendChild(article2);
 
   var h12 = document.createElement('h1');
   h12.textContent = "Rivendell";
-  article.appendChild(h12);
+  article2.appendChild(h12);
 
-  var article = document.createElement('article');
-  section.appendChild(article);
+  var article3 = document.createElement('article');
+  section.appendChild(article3);
 
   var h13 = document.createElement('h1');
   h13.textContent = "Mordor";
-  article.appendChild(h13);
+  article3.appendChild(h13);
 }
 
 makeMiddleEarth();
@@ -64,13 +64,17 @@ function makeHobbits() {
   // display an unordered list of hobbits in the shire (which is the first article tag on the page)
   // give each hobbit a class of hobbit
 
-  var list = document.createElement("ul");
-
-
-
+  var list = document.createElement('ul');
+  var theShire = document.querySelector("article");
+  for (var i = 0; i < hobbits.length; i++) {
+    var hobbitList = document.createElement("li");
+    hobbitList.textContent = hobbits[i];
+    theShire.appendChild(hobbitList);
+  }
+  theShire.appendChild(list);
+  
 }
-
-alert("Part 2 is working");
+makeHobbits();
 
 // Part 3
 
@@ -80,8 +84,13 @@ function keepItSecretKeepItSafe() {
   // add an event listener so that when a user clicks on the ring, the nazgulScreech function (provided) is invoked
   // add the ring as a child of Frodo
 }
+var ring = document.createElement("div");
+ring.setAttribute("id", "the-ring");
+ring.setAttribute("class", "magic-imbued-jewelry");
 
 
+
+console.log("Part 3 is working!");
 // Part 4
 
 
