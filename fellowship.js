@@ -104,15 +104,14 @@ var asideTag = document.createElement("aside");
 
   // attach an unordered list of the 'buddies' in the aside
 var buddiesList = document.createElement('ul');
-var attachAside = document.querySelector("aside");
 for (var i = 0; i < buddies.length; i++) {
   var listOfBuddies = document.createElement('li');
   listOfBuddies.textContent = buddies[i];
-  attachAside.appendChild(listOfBuddies);
+  asideTag.appendChild(listOfBuddies);
 }
-
+console.log("sup dog");
   // insert your aside as a child element of rivendell
-var rivendell = querySelectorAll('article')[1];
+var rivendell = document.querySelectorAll('article')[1];
 rivendell.appendChild(asideTag);
 
 }
