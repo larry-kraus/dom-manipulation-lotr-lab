@@ -109,22 +109,27 @@ for (var i = 0; i < buddies.length; i++) {
   listOfBuddies.textContent = buddies[i];
   asideTag.appendChild(listOfBuddies);
 }
-console.log("sup dog");
+
   // insert your aside as a child element of rivendell
 var rivendell = document.querySelectorAll('article')[1];
 rivendell.appendChild(asideTag);
 
 }
 makeBuddies();
-console.log("Part 4 is working!");
 
 // Part 5
 
 
 function beautifulStranger() {
   // change the 'Strider' textnode to 'Aragorn'
-}
+var strider = document.getElementsByTagName('li')[7];
+strider.textContent = "Aragorn";
+//strider.setAttribute("id", "strider1");
+//document.getElementById('strider1').textContent = "Aragorn";
 
+}
+beautifulStranger();
+console.log("Part 5 is working!");
 
 // Part 6
 
